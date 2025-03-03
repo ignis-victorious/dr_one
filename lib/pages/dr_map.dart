@@ -3,18 +3,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 //  Import FILES
+import '../widgets/drmap.dart';
 //  PARTS
 //  PROVIDERS
 //  ________________________
 
 class DRMapApp extends StatelessWidget {
-  const DRMapApp({Key? key}) : super(key: key);
+  const DRMapApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('DR Map App')),
-      // body: Center(child: SvgPicture.asset()),
+      backgroundColor: Color(0xFFC6ECFF),
+      appBar: AppBar(title: const Text('DR Map App - SVG')),
+      body: Stack(
+        children: <Widget>[
+          DRMap(),
+          // SvgPicture.asset('./assets/svgs/map_assets/baserd.svg'),
+        ],
+      ),
+      // Center(child: SvgPicture.asset('./assets/svgs/rd.svg')),
     );
   }
 }
