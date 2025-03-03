@@ -16,7 +16,9 @@ class DRMapApp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFFC6ECFF),
       // appBar: AppBar(title: const Text('DR Map App - SVG')),
-      body: Stack(children: <Widget>[DRMap()]),
+      body: Stack(children: <Widget>[
+        InteractiveViewer(clipBehavior: Clip.none, child: DRMap())
+      ]),
       // Center(child: SvgPicture.asset('./assets/svgs/rd.svg')),
     );
   }
